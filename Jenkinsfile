@@ -6,15 +6,14 @@ pipeline {
     }
 
     environment {
-        // OLD
-        // NEXUS_URL   = 'http://nexus:8081'
-
-        // NEW
-        NEXUS_URL   = 'http://host.docker.internal:8081'
+     
+        NEXUS_URL   = 'http://nexus:8081'
         NEXUS_REPO  = 'maven-releases'
+       
         GROUP_ID    = 'com.example'
         ARTIFACT_ID = 'spring-boot-complete'
         VERSION     = '0.0.1-SNAPSHOT'
+        
         NEXUS_CREDS = 'nexus-cred-id'
     }
 
