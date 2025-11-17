@@ -6,16 +6,15 @@ pipeline {
     }
 
     environment {
-        // Nexus inside Docker network – Jenkins can reach it by container name
-        NEXUS_URL   = 'http://nexus:8081'
-        NEXUS_REPO  = 'maven-releases'
+        // OLD
+        // NEXUS_URL   = 'http://nexus:8081'
 
-        // Maven coordinates of your jar
+        // NEW
+        NEXUS_URL   = 'http://host.docker.internal:8081'
+        NEXUS_REPO  = 'maven-releases'
         GROUP_ID    = 'com.example'
         ARTIFACT_ID = 'spring-boot-complete'
         VERSION     = '0.0.1-SNAPSHOT'
-
-        // Jenkins credentials ID for Nexus
         NEXUS_CREDS = 'nexus-cred-id'
     }
 
