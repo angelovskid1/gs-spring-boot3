@@ -8,7 +8,7 @@ pipeline {
     environment {
      
         NEXUS_URL   = 'http://nexus:8081'
-        NEXUS_REPO  = 'maven-releases'
+        NEXUS_REPO  = 'maven-snapshots'
        
         GROUP_ID    = 'com.example'
         ARTIFACT_ID = 'spring-boot-complete'
